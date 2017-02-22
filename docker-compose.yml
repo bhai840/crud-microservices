@@ -3,7 +3,7 @@ services:
   eureka-server:
     image: netflixoss/eureka:1.3.1
     ports:
-      - "8088:8080"
+      - 8080
   cassandra:
     image: spotify/cassandra
   crudmicroservices-middle:
@@ -11,5 +11,7 @@ services:
     links:
       - eureka-server
       - cassandra
+    depends_on:
+      - eureka-server
     environment:
       - eureka.server.host=eureka-server
