@@ -1,0 +1,8 @@
+version: '2'
+services:
+  cassandra:
+    image: spotify/cassandra
+  crudmicroservices-middle:
+    image: crudmicroservices:latest
+    links:
+      - cassandra
