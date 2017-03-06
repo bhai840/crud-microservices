@@ -25,14 +25,14 @@ $ sh build-docker-images.sh
 Having it done we are ready to start all of services (ServiceDiscovery, APIGateway, EdgeService, MiddleService, Cassandra..)
 
 ```sh
-$ sh docker-compose up
+$ docker-compose up
 ```
 
 This single line command will start everything, just wait a moment (+/- 1 min).
 
 ### Scaling Up
 ```sh
-$ sh docker-compose scale {serviceName}={numberOfInstances} ...
+$ docker-compose scale {serviceName}={numberOfInstances} ...
 ```
 
 Once started we can verify the Up services at Eureka console: [Eureka Console](http://localhost:8080/eureka)
