@@ -44,12 +44,9 @@ $ sh docker-compose up
 
 This single line command will start everything, just wait a moment (+/- 1 min).
 
-Once started we can verify the Up services at Eureka console:
+Once started we can verify the Up services at Eureka console: [Eureka Console](http://localhost:8080/eureka)
 
-[Eureka Console](http://localhost:8080/eureka)
-
-The API Gateway can be reached at: 
-[Zuul](http://localhost:9090)
+The API Gateway can be reached at: [Zuul](http://localhost:9090)
 
 Requests can be sent to the Gateway: http://localhost:9090/crudmicroservicesedge
 
