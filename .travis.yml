@@ -6,7 +6,7 @@ services:
 before_install: |-
  cqlsh -e "SOURCE 'crudmicroservices-middle/src/cassandra/cql/exec.cql';"
 
-install: mvn -Denvironment=travis install -X
+install: mvn install -Ptravis -X
 
 script: mvn test -X
 jdk:
