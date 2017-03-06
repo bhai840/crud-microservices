@@ -14,7 +14,7 @@ import com.google.common.base.Strings;
  * @author geiser
  *
  */
-public class Person implements Serializable {
+public class    Person implements Serializable {
 
     /**
      * 

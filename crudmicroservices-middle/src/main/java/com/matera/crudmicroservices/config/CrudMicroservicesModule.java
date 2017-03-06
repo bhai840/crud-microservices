@@ -16,19 +16,22 @@ import com.netflix.governator.guice.lazy.LazySingletonScope;
 
 public class CrudMicroservicesModule extends AbstractModule {
 
-	private final DynamicStringProperty cassandraHost = 
-			DynamicPropertyFactory.getInstance()
-				.getStringProperty("crudmicroservicesmiddle.cassandra.host", "");
-	
-	private final DynamicStringProperty cassandraKeyspace = 
-			DynamicPropertyFactory.getInstance().getStringProperty("crudmicroservicesmiddle.cassandra.keyspace", "");
-	
-	private final DynamicStringProperty cacheAppName = 
-			DynamicPropertyFactory.getInstance().getStringProperty("crudmicroservicesmiddle.evcache.appname", "");
-	
-	private final DynamicStringProperty cachePrefix =
-			DynamicPropertyFactory.getInstance().getStringProperty("crudmicroservicesmiddle.evcache.prefix", "");
-	
+	private static final DynamicStringProperty cassandraHost;
+	private static final DynamicStringProperty cassandraKeyspace;
+	private static final DynamicStringProperty cacheAppName;
+	private static final DynamicStringProperty cachePrefix;
+
+	static {
+
+		DynamicPropertyFactory factory = DynamicPropertyFactory.getInstance();
+
+		cassandraHost = factory.getStringProperty("crudmicroservicesmiddle.cassandra.host", "");
+		cassandraKeyspace = factory.getStringProperty("crudmicroservicesmiddle.cassandra.keyspace", "");
+		cacheAppName = factory.getStringProperty("crudmicroservicesmiddle.evcache.appname", "");
+		cachePrefix = factory.getStringProperty("crudmicroservicesmiddle.evcache.prefix", "");
+
+	}
+
 	@Override
 	protected void configure() {
 		bind(PersonStore.class).to(PersonStoreCassandra.class).in(LazySingletonScope.get());
