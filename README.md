@@ -53,8 +53,8 @@ The API Gateway can be reached at:
 
 Requests can be sent to the Gateway: http://localhost:9090/crudmicroservicesedge
 
-#### Examples
-##### Create Person
+### Examples
+#### Create Person
 Request
 ```sh
 $ curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
@@ -64,7 +64,7 @@ $ curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" 
 }' "http://localhost:9090/crudmicroservicesedge/services/v1/persons/"
 ```
 
-##### Query Person by ID
+#### Query Person by ID
 Request:
 ```sh
 curl -X GET -H "Cache-Control: no-cache" "http://localhost:9090/crudmicroservicesedge/services/v1/persons/1"
@@ -78,7 +78,7 @@ Response:
 }
 ```
 
-##### Retrieve all Persons
+#### Retrieve all Persons
 Request:
 ```sh
 curl -X GET -H "Cache-Control: no-cache" "http://localhost:9090/crudmicroservicesedge/services/v1/persons"
