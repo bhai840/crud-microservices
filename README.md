@@ -30,7 +30,7 @@ $ sh docker-compose up
 
 This single line command will start everything, just wait a moment (+/- 1 min).
 
-## Scaling Up
+### Scaling Up
 ```sh
 $ sh docker-compose scale {serviceName}={numberOfInstances} ...
 ```
