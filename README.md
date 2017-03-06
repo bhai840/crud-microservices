@@ -81,3 +81,19 @@ Response:
 	}]
 }
 ```
+--------------------------------------------------
+## Running without Docker
+#### crudmicroservices-ui
+```
+$ gulp serve
+```
+
+#### crudmicroservices-edge
+```
+$ mvn tomcat7:run {for eureka add: -P eureka-local}
+```
+
+#### crudmicroservices-middle
+```
+$ mvn cassandra:start tomcat7:run {for eureka add: -P eureka-local}
+```
