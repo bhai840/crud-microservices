@@ -28,20 +28,9 @@ This is a example project using Netflix OSS technologies to build Microservices 
 * Less
 * Bower
 * NPM
-
-## Running locally 
-
-#### crudmicroservices-ui
-```
-$ gulp serve
-```
-
-#### crudmicroservices-edge
-```
-$ mvn tomcat7:run {for eureka add: -P eureka-local}
-```
-
-#### crudmicroservices-middle
-```
-$ mvn cassandra:start tomcat7:run {for eureka add: -P eureka-local}
+s
+## Running with Docker
+The docker-compose file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script 'build-docker-images'
+```sh
+$ sh build-docker-images.sh
 ```
