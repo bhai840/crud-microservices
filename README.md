@@ -43,7 +43,9 @@ $ sh docker-compose up
 ```
 
 This single line command will start everything, just wait a moment (+/- 1 min).
+
 Once started we can verify the Up services at Eureka console:
+
 [Eureka Console](http://localhost:8080/eureka)
 
 The API Gateway can be reached at: 
@@ -61,7 +63,6 @@ $ curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" 
 	"phoneNumber": "99513131"
 }' "http://localhost:9090/crudmicroservicesedge/services/v1/persons/"
 ```
-Response:
 
 ##### Query Person by ID
 Request:
@@ -69,6 +70,13 @@ Request:
 curl -X GET -H "Cache-Control: no-cache" "http://localhost:9090/crudmicroservicesedge/services/v1/persons/1"
 ```
 Response:
+```javascript
+{
+  "id": 1,
+  "name": "Paulo Almeida",
+  "phoneNumber": "98183229"
+}
+```
 
 ##### Retrieve all Persons
 Request:
@@ -76,3 +84,17 @@ Request:
 curl -X GET -H "Cache-Control: no-cache" "http://localhost:9090/crudmicroservicesedge/services/v1/persons"
 ```
 Response:
+```javascript
+{
+	"totalAssets": 2,
+	"assets": [{
+		"id": 1,
+		"name": "Paulo Almeida",
+		"phoneNumber": "98183229"
+	}, {
+		"id": 2,
+		"name": "Paulo Almeida",
+		"phoneNumber": "98183229"
+	}]
+}
+```
