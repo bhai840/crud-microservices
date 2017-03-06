@@ -41,7 +41,7 @@ The API Gateway can be reached at: [Zuul](http://localhost:9090)
 
 Requests can be sent to the Gateway: http://localhost:9090/crudmicroservicesedge
 
-### Examples
+### Requests Examples
 #### Create Person
 Request
 ```sh
@@ -62,7 +62,7 @@ Response:
 {
   "id": 1,
   "name": "Paulo Almeida",
-  "phoneNumber": "98183229"
+  "phoneNumber": "99513131"
 }
 ```
 
@@ -78,10 +78,10 @@ Response:
 	"assets": [{
 		"id": 1,
 		"name": "Paulo Almeida",
-		"phoneNumber": "98183229"
+		"phoneNumber": "99513131"
 	}, {
 		"id": 2,
-		"name": "Paulo Almeida",
+		"name": "Joaquim da Silva",
 		"phoneNumber": "98183229"
 	}]
 }
