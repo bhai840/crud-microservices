@@ -245,7 +245,7 @@
 		</profile>
 
 		<profile>
-			<id>travis-integration-test</id>
+			<id>travis</id>
 			<activation>
 				<property>
 					<name>environment</name>
