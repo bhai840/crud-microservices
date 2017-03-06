@@ -16,7 +16,7 @@ This is a example project using Netflix OSS technologies to build Microservices 
 | RxJava           | Netflix EVCache    | NPM          |
 
 ## Running with Docker
-The [docker-compose](https://github.com/rochapaulo/crud-microservices/blob/master/docker-compose.yml) file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script [build-docker-images](https://github.com/rochapaulo/crud-microservices/blob/master/build-docker-images.sh)
+The [docker-compose](docker-compose.yml) file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script [build-docker-images](build-docker-images.sh)
 
 ```sh
 $ sh build-docker-images.sh
