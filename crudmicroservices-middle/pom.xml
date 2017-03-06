@@ -210,7 +210,7 @@
 									<port>${tomcat.port}</port>
 									<update>true</update>
 									<systemProperties>
-										<archaius.deployment.environment>local</archaius.deployment.environment>
+										<archaius.deployment.environment>travis</archaius.deployment.environment>
 										<application.home>${basedir}${file.separator}src${file.separator}test${file.separator}resources${file.separator}</application.home>
 										<application.version>${project.version}</application.version>
 										<http.port>${tomcat.port}</http.port>
