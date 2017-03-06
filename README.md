@@ -5,29 +5,15 @@
 
 This is a example project using Netflix OSS technologies to build Microservices that will run at AWS cloud. The used technologies are:
 
-* Maven
-* Java 8
-* Google Guice
-* Netflix OSS
-  * Governator
-  * Karyon
-  * Hystrix
-  * Eureka
-  * Archaius
-  * Ribbon
-  * EVCache
-* Jersey
-* Jackson
-* Cassandra
-* RXJava (Observable)
-* Guava
-* JUnit
-* Groovy / Spock
-* AngularJS
-* Bootstrap
-* Less
-* Bower
-* NPM
+| Technologies  | -                  | -            |
+| ------------- |:------------------:| ------------:|
+| Maven         | Netflix Governator | Google Guava |
+| Java 8        | Netflix Karyon     | jUnit        |
+| Google Guice  | Netflix Hystrix    | AngularJS    |
+| Jersey        | Netflix Eureka     | Bootstrap    |
+| Jackson       | Netflix Archaius   | Less         |
+| Cassandra     | Netflix Ribbon     | Bower        |
+| RxJava        | Netflix EVCache    | NPM          |
 
 ## Running with Docker
 The docker-compose file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script 'build-docker-images'
