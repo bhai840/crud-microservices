@@ -8,7 +8,7 @@ before_install: |-
 
 install: mvn install -Ptravis -X
 
-script: mvn test -X
+script: mvn -Ptravis test -X
 jdk:
  - oraclejdk8
 
