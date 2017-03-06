@@ -25,7 +25,7 @@ services:
     links:
       - eureka
       - cassandra
-    command: ./wait-for-it.sh -t 0 cassandra:9042 -- cqlsh schema.cql
+    command: ./wait-for-it.sh -t 40 cassandra:9042 -- cqlsh -f schema.cql cassandra
   crudmicroservices-edge:
     image: crudmicroservices-edge:latest
     links:
