@@ -16,7 +16,7 @@ This is a example project using Netflix OSS technologies to build Microservices 
 | RxJava           | Netflix EVCache    | NPM          |
 
 ## Running with Docker
-The docker-compose file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script 'build-docker-images'
+The [docker-compose](https://github.com/rochapaulo/crud-microservices/blob/master/docker-compose.yml) file starts everything needed to have the 'crudmicroservices' up and running. First we have to build the project and generate the images for each service, for this just run the script [build-docker-images](https://github.com/rochapaulo/crud-microservices/blob/master/build-docker-images.sh)
 
 ```sh
 $ sh build-docker-images.sh
@@ -29,6 +29,11 @@ $ sh docker-compose up
 ```
 
 This single line command will start everything, just wait a moment (+/- 1 min).
+
+## Scaling Up
+```sh
+$ sh docker-compose scale {serviceName}={numberOfInstances} ...
+```
 
 Once started we can verify the Up services at Eureka console: [Eureka Console](http://localhost:8080/eureka)
 
