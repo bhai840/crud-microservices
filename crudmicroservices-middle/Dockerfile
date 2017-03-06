@@ -9,11 +9,11 @@ RUN apk add --update \
 RUN apk add --update curl && \
     rm -rf /var/cache/apk/*
 
-RUN curl -O https://pypi.python.org/packages/12/a7/13aff4ad358ff4abef6823d872154d0955ff6796739fcaaa2c80a6940aa6/cqlsh-5.0.3.tar.gz && \
-    tar -zxvf cqlsh-5.0.3.tar.gz && \
+RUN curl -O https://pypi.python.org/packages/8c/8d/1bc41af3429d31e78af39acdf9c45f8e61f65251aec0050e7638d43fd70e/cqlsh-4.1.1.tar.gz && \
+    tar -zxvf cqlsh-4.1.1.tar.gz && \
     pip install -U pip setuptools
 
-RUN cd cqlsh-5.0.3 && pip install . && cd ..
+RUN cd cqlsh-4.1.1 && pip install . && cd ..
 
 COPY wait-for-it.sh wait-for-it.sh
 COPY src/cassandra/cql/exec.cql schema.cql

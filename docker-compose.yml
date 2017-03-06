@@ -25,7 +25,7 @@ services:
     links:
       - eureka
       - cassandra
-    command: ./wait-for-it.sh -t 40 cassandra:9042 -- cqlsh -f schema.cql cassandra
+    entrypoint: nohup catalina.sh run && ./wait-for-it.sh -t 40 cassandra:9160 -- cqlsh -f schema.cql cassandra 9160
   crudmicroservices-edge:
     image: crudmicroservices-edge:latest
     links:
